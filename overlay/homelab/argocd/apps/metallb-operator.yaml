@@ -11,6 +11,6 @@ spec:
   source:
     kustomize:
       namespace: metallb-system
-    path: overlay/homelab/metallb-system
+    path: overlay/homelab/metallb-operator
     repoURL: https://github.com/Nosmoht/gitops-k8s-homelab.git
     targetRevision: HEAD
