@@ -4,3 +4,4 @@ resources:
   - cert-manager.yaml
   - metallb-operator.yaml
   - piraeus-operator.yaml
+  - metallb.yaml

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metallb
+spec:
+  destination:
+    namespace: metallb
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: overlay/homelab/metallb
+    repoURL: 'https://github.com/Nosmoht/gitops-k8s-homelab.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
