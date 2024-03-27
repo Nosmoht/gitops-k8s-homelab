@@ -1,0 +1,9 @@
+apiVersion: piraeus.io/v1
+kind: LinstorCluster
+metadata:
+  name: linstorcluster
+spec:
+  apiTLS:
+    certManager:
+      kind: Issuer
+      name: linstor-api-ca
