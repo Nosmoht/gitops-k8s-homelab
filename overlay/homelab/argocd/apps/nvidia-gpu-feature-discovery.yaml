@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nvidia-gpu-feature-discovery
+spec:
+  destination:
+    namespace: kube-system
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: overlay/homelab/nvidia-gpu-feature-discovery
+    repoURL: 'https://github.com/Nosmoht/gitops-k8s-homelab.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

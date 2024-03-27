@@ -8,4 +8,5 @@ resources:
   - metrics-server.yaml
   - node-feature-discovery.yaml
   - nvidia-device-plugin.yaml
+  - nvidia-gpu-feature-discovery.yaml
   - piraeus-operator.yaml

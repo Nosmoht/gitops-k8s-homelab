@@ -1,0 +1,5 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../base/nvidia-gpu-feature-discovery/v0.8.2
+namespace: kube-system
