@@ -6,3 +6,4 @@ resources:
   - metallb.yaml
   - piraeus-operator.yaml
   - linstor.yaml
+  - node-feature-discovery.yaml
