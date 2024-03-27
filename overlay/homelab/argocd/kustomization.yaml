@@ -5,4 +5,5 @@ resources:
   - namespace.yaml
   - ../../../base/argocd/v2.10.4/
   - ingress.yaml
+  - application.yaml
   - apps/
