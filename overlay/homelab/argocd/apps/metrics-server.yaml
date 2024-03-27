@@ -5,12 +5,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: metrics-server
+    namespace: kube-system
     server: https://kubernetes.default.svc
   project: default
   source:
     kustomize:
-      namespace: metrics-server
+      namespace: kube-system
     path: overlay/homelab/metrics-server
     repoURL: https://github.com/Nosmoht/gitops-k8s-homelab.git
     targetRevision: HEAD
