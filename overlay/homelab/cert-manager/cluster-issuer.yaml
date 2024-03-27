@@ -10,9 +10,9 @@ spec:
       name: homelab-account-key
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
-    - dns01:
-        cloudDNS:
-          project: io-ntbc-domain-control-1900413
-          serviceAccountSecretRef:
-            key: service-account-key.json
-            name: google-cloud-dns
+      - dns01:
+          cloudDNS:
+            project: io-ntbc-domain-control-1900413
+            serviceAccountSecretRef:
+              key: service-account-key.json
+              name: google-cloud-dns
