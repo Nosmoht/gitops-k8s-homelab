@@ -6,7 +6,13 @@ resources:
   - cluster-issuer.yaml
   - pod-monitor.yaml
 patches:
-  - path: deployment-patch.yaml
-    target:
+  - target:
       kind: Deployment
       name: cert-manager
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/ports/-
+        value:
+          containerPort: 9402
+          name: http-metrics
+          protocol: TCP
