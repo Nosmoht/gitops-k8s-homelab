@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - cert-manager.yaml
   - metallb-operator.yaml
-  - piraeus-operator.yaml
   - metallb.yaml
+  - piraeus-operator.yaml
+  - linstor.yaml
