@@ -1,18 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-cd
+  name: kubevirt-operator
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: kubevirt
     server: https://kubernetes.default.svc
   project: default
   source:
     kustomize:
-      namespace: argocd
-    path: overlay/homelab/argocd
+      namespace: kubevirt
+    path: overlay/homelab/kubevirt-operator
     repoURL: https://github.com/Nosmoht/gitops-k8s-homelab.git
     targetRevision: HEAD
-  syncPolicy:
-    automated: {}
