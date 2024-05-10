@@ -1,7 +1,7 @@
 apiVersion: piraeus.io/v1
 kind: LinstorSatelliteConfiguration
 metadata:
-  name: talos-loader-override
+  name: homelab
 spec:
   patches:
     - patch: |
@@ -43,5 +43,4 @@ spec:
       name: lvm-thick
       source:
         hostDevices:
-          - /dev/sdb
-          - /dev/sdc
+          - /dev/nvme0n1
