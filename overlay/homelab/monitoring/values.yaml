@@ -1,0 +1,67 @@
+fullnameOverride: homelab
+
+alertmanager:
+  alertmanagerSpec:
+    logFormat: json
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: linstor-csi
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 10Gi
+
+# Talos config
+coreDns:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    port: metrics
+    selector:
+      matchLabels:
+        k8s-app: kube-dns
+
+grafana:
+  persistence:
+    enabled: true
+    storageClassName: linstor-csi
+
+kubeControllerManager:
+  service:
+    selector:
+      k8s-app: kube-controller-manager
+
+kubeDns:
+  enabled: false
+
+kubeEtcd:
+  enabled: true
+  endpoints:
+    - 192.168.2.61
+    - 192.168.2.62
+    - 192.168.2.63
+  service:
+    enabled: true
+    port: 2381
+    targetPort: 2381
+
+# Disabled as Cilium is used with kube-proxy replacement
+kubeProxy:
+  enabled: false
+
+kubeScheduler:
+  service:
+    selector:
+      k8s-app: kube-scheduler
+
+prometheus:
+  prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: linstor-csi
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 10Gi
