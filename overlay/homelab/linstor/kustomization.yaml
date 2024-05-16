@@ -7,3 +7,4 @@ resources:
   - issuers.yaml
   - linstor-cluster.yaml
   - linstor-satellite-configuration.yaml
+  - storage-classes.yaml
