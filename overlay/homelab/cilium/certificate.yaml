@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-ntbc-io
+spec:
+  dnsNames:
+    - "*.ntbc.io"
+  issuerRef:
+    kind: ClusterIssuer
+    name: homelab
+  secretName: ntbc-io-tls
