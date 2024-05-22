@@ -1,0 +1,18 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: grafana-route
+spec:
+  parentRefs:
+    - name: homelab
+      namespace: kube-system
+  hostnames:
+    - "grafana.ntbc.io"
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: homelab-grafana
+          port: 80

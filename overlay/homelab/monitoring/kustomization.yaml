@@ -4,6 +4,7 @@ resources:
   - namespace.yaml
 helmCharts:
   - name: kube-prometheus-stack
+    includeCRDs: false # CRD's are installed as Talos inline manifests
     releaseName: homelab
     repo: https://prometheus-community.github.io/helm-charts
     version: 58.5.3
