@@ -4,7 +4,8 @@ namespace: piraeus-datastore
 generatorOptions:
   disableNameSuffixHash: true
 resources:
-  - issuers.yaml
+  - tls.yaml
   - linstor-cluster.yaml
   - linstor-satellite-configuration.yaml
   - storage-classes.yaml
+  - https://github.com/piraeusdatastore/piraeus-operator//config/extras/monitoring?ref=v2.5.1

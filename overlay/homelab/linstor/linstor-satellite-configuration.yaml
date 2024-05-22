@@ -3,6 +3,10 @@ kind: LinstorSatelliteConfiguration
 metadata:
   name: homelab
 spec:
+  internalTLS:
+    certManager:
+      name: linstor-internal-ca
+      kind: Issuer
   patches:
     - patch: |
         apiVersion: v1
