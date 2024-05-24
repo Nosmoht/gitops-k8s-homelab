@@ -4,8 +4,7 @@ metadata:
   annotations:
     kubevirt.io/latest-observed-api-version: v1
     kubevirt.io/storage-observed-api-version: v1
-  name: kubevirt
-  namespace: kubevirt
+  name: homelab
 spec:
   certificateRotateStrategy: {}
   configuration:
