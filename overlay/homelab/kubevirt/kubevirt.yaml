@@ -11,6 +11,7 @@ spec:
     developerConfiguration:
       featureGates:
         - DataVolumes
+        - LiveMigrate
   customizeComponents: {}
   imagePullPolicy: IfNotPresent
   workloadUpdateStrategy:
