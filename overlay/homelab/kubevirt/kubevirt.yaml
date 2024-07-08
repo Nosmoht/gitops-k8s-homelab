@@ -13,4 +13,6 @@ spec:
         - DataVolumes
   customizeComponents: {}
   imagePullPolicy: IfNotPresent
-  workloadUpdateStrategy: {}
+  workloadUpdateStrategy:
+    workloadUpdateMethods:
+      - LiveMigrate
